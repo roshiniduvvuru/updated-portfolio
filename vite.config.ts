@@ -11,6 +11,9 @@ export default defineConfig({
       overlay: false,
     },
   },
+  preview: {
+    allowedHosts: ["updated-portfolio-hsln.onrender.com"],
+  },
   plugins: [react()],
   resolve: {
     alias: {
