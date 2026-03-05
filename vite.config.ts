@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   preview: {
-    allowedHosts: ["updated-portfolio-hsln.onrender.com"],
+    allowedHosts: ["updated-portfolio-hsln.onrender.com", "roshiniduvvuru.in"],
   },
   plugins: [react()],
   resolve: {
