@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 15%;
+
+    --primary: 215 60% 18%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 210 25% 93%;
+    --secondary-foreground: 215 35% 15%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 38 65% 55%;
+    --accent-foreground: 215 60% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 215 60% 18%;
+
+    --radius: 0.375rem;
+
+    /* Custom tokens */
+    --navy: 215 60% 18%;
+    --navy-light: 215 45% 28%;
+    --navy-dark: 215 65% 12%;
+    --gold: 38 65% 55%;
+    --gold-light: 38 55% 70%;
+    --slate-subtle: 210 15% 60%;
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    @apply text-3xl lg:text-4xl font-semibold tracking-tight text-primary;
+  }
+
+  .section-subtitle {
+    @apply text-sm font-semibold uppercase tracking-[0.2em] text-accent;
+  }
+
+  .kpi-card {
+    @apply bg-card border border-border rounded-md p-6 text-center;
+  }
+
+  .kpi-value {
+    font-family: var(--font-display);
+    @apply text-3xl lg:text-4xl font-bold text-primary;
+  }
+
+  .kpi-label {
+    @apply text-sm text-muted-foreground mt-2 leading-snug;
+  }
+
+  .capability-tag {
+    @apply inline-block px-3 py-1.5 text-sm border border-border rounded-sm bg-secondary text-secondary-foreground;
+  }
+
+  .case-study-card {
+    @apply bg-card border border-border rounded-md p-8 lg:p-10;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-muted-foreground hover:text-primary transition-colors;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold bg-primary text-primary-foreground rounded-sm hover:opacity-90 transition-opacity;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold border border-primary text-primary rounded-sm hover:bg-primary hover:text-primary-foreground transition-colors;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-primary hover:bg-secondary rounded-sm transition-colors;
+  }
+}
