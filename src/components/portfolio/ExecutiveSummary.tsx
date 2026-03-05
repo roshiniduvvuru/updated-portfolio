@@ -11,7 +11,7 @@ const ExecutiveSummary = () => {
               B.Tech IT graduate and SAP ABAP Developer at Accenture with hands-on experience 
               in enterprise resource planning systems, custom ABAP development, and backend 
               optimization. Currently contributing to SAP ECC and S/4HANA projects as part 
-              of the SAP PADA (Package ABAP Development Associate) role, building a strong 
+              of the SAP PADA (Package Application Development Associate) role, building a strong 
               foundation in real-world enterprise solutions.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
